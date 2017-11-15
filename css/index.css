@@ -1,0 +1,122 @@
+.menu {
+    background-color: black;
+    color: white;
+    diplay: flex;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    margin: 0.5vw;
+}
+
+.box {
+    border-radius: 2px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(230, 230, 230);
+    color: black;
+}
+
+main {
+    background-color: rgb(240, 240, 240);
+    width: 80vw;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+
+article figure {
+    margin-left: 0;
+}
+
+.portrait {
+    max-height: 22vh;
+}
+
+article .portrait {
+    max-height: 30vh;
+}
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-galerie {
+    max-width: 50vw;
+    max-height: 25vh;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+.aside-block {
+    display: flex;
+}
+
+article {
+    flex: 6;
+}
+
+@media (min-width: 601px) and (max-width: 900px)  {
+    main {
+        padding: 1vw;
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .aside-block {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 901px) {
+    main {
+        padding: 2vw;
+        flex-direction: row;
+    }
+
+    .aside-block {
+        flex-direction: column;
+    }
+}
+
+aside h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}

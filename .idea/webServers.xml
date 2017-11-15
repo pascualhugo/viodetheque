@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="34325f44-04a6-43a8-a07e-4d068d2fc535" name="config" url="http://ohmydog.alwaysdata.net">
+        <fileTransfer host="ssh-ohmydog.alwaysdata.net" port="22" rootFolder="/home/ohmydog" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
