@@ -27,3 +27,4 @@ function displayPortrait($person) {
           <figcaption>' . $person->getFirstName() . ' ' . $person->getLastName() . '</figcaption>
           </figure>';
 }
+

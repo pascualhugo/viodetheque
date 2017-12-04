@@ -11,5 +11,4 @@ for ($i = 0 ; $i < sizeof($data->getGallery()); $i++) {
               <figcaption>' . $image["legend"] . '</figcaption>
           </figure>';
 }
-echo '  </div>
-        </aside>';
+echo '</div></aside>';

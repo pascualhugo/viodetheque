@@ -1,15 +1,14 @@
 <?php
-
 class Movie
 {
-    var $id;
-    var $title;
-    var $releaseDate;
-    var $synopsis;
-    var $rating;
-    var $actors;
-    var $director;
-    var $gallery;
+    private $id;
+    private $title;
+    private $releaseDate;
+    private $synopsis;
+    private $rating;
+    private $actors;
+    private $director;
+    private $gallery;
 
     /**
      * Movie constructor.

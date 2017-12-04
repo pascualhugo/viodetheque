@@ -1,14 +1,15 @@
 <?php
-
 class Person
 {
-    var $id;
-    var $firstName;
-    var $lastName;
-    var $birthInformations;
-    var $nationality;
-    var $biography;
-    var $image;
+    private $id;
+    private $firstName;
+    private $lastName;
+    private $birthInformations;
+    private $nationality;
+    private $biography;
+    private $image;
+    private $moviesAsActor;
+    private $moviesAsDirector;
 
     /**
      * Person constructor.
@@ -19,8 +20,11 @@ class Person
      * @param $nationality
      * @param $biography
      * @param $image
+     * @param $moviesAsActor
+     * @param $moviesAsDirector
      */
-    public function __construct($id, $firstName, $lastName, $birthInformations, $nationality, $biography, $image)
+    public function __construct($id, $firstName, $lastName, $birthInformations, $nationality, $biography, $image,
+                                $moviesAsActor, $moviesAsDirector)
     {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -29,6 +33,8 @@ class Person
         $this->nationality = $nationality;
         $this->biography = $biography;
         $this->image = $image;
+        $this->moviesAsActor = $moviesAsActor;
+        $this->moviesAsDirector = $moviesAsDirector;
     }
 
     /**
@@ -78,11 +84,28 @@ class Person
     {
         return $this->biography;
     }
+
     /**
      * @return mixed
      */
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMoviesAsActor()
+    {
+        return $this->moviesAsActor;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMoviesAsDirector()
+    {
+        return $this->moviesAsDirector;
     }
 }

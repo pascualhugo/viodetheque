@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>videotheque</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
-</head>
 <?php include_once 'getBlock.php';
 include_once '../model/requests.php';
 if (isset($_GET["movieId"])) {
@@ -13,8 +6,15 @@ if (isset($_GET["movieId"])) {
 } else {
     $movieId = 1;
 }
-$movie = getMovieInformations($movieId);
+$movie = getMovieDetails($movieId);
 ?>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>videotheque</title>
+    <link rel="stylesheet" type="text/css" href="../css/movie.css"/>
+</head>
 <body>
     <?php getBlock('../view/header.php', [])?>
     <main>
@@ -30,3 +30,4 @@ $movie = getMovieInformations($movieId);
     <script src="../js/jquery-3.2.1.js"></script>
 </body>
 </html>
+

@@ -91,3 +91,4 @@ class SPDO
         return $this->PDOInstance->prepare($query);
     }
 }
+

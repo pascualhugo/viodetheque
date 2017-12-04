@@ -1,10 +1,7 @@
 <?php
-require_once 'classes/Movie.php';
-require_once 'classes/Actor.php';
-require_once 'classes/Director.php';
 
 /** return Movie */
-function getMovieInformations ($movieId) {
+function getMovieDetails ($movieId) {
     $queryMovie = "SELECT *
               FROM movie M
               WHERE M.id = :id";
@@ -13,27 +10,25 @@ function getMovieInformations ($movieId) {
     $requestMovie->execute();
     $movie = $requestMovie->fetch();
     $moviePersons = getPersonsFromAMovie($movieId);
-    var_dump($movie);
     for ($i = 0 ; $i < sizeof($moviePersons); ++$i) {
         $person = transformIntoPerson($moviePersons[$i]);
         if ($person instanceof Director) {
             $director = $person;
         } else {
-            $actors[$i] = $person;
+            $actors[] = $person;
         }
     }
     $images = getGalleryImages($movieId);
-
     return new Movie($movie['id'], $movie['title'], $movie['release_date'], $movie['synopsis'], $movie['rating'], $actors, $director, $images);
 }
 
 function transformIntoPerson ($person) {
     if ($person['role'] == 'actor') {
         return new Actor($person['id'], $person['firstname'], $person['lastname'], $person['birth_informations'],
-            $person['nationality'], $person['biography'], $person['path']);
+            $person['nationality'], $person['biography'], $person['path'], null, null);
     } else {
         return new Director($person['id'], $person['firstname'], $person['lastname'], $person['birth_informations'],
-            $person['nationality'], $person['biography'], $person['path']);
+            $person['nationality'], $person['biography'], $person['path'], null, null);
     }
 }
 

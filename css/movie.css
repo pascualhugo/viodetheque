@@ -69,6 +69,11 @@ figcaption {
     font-style: italic;
 }
 
+aside figure {
+    text-align: center;
+    flex: 1;
+}
+
 .aside-block {
     display: flex;
 }
@@ -77,9 +82,9 @@ article {
     flex: 6;
 }
 
-@media (min-width: 601px) and (max-width: 900px)  {
+@media (max-width: 600px)  {
     main {
-        padding: 1vw;
+        padding: 5vw;
         flex-direction: column;
     }
 
@@ -88,7 +93,26 @@ article {
     }
 
     .aside-block {
-        flex-direction: row;
+        flex-direction: column;
+    }
+
+    .portrait {
+        max-height: 18vh;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px)  {
+    main {
+        padding: 3vw;
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .aside-block {
+        flex-direction: column;
     }
 }
 

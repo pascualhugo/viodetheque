@@ -2,8 +2,8 @@
 echo '<header>
         <nav class="menu box">
             <ul>
-                <li><a href="actor.php" >Acteurs</a></li>
-                <li><a href="director.php" >Réalisateur</a></li>
+                <li><a href="person.php" >Acteurs</a></li>
+                <li><a href="movie.php" >Réalisateur</a></li>
             </ul>
         </nav>
     </header>';

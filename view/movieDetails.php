@@ -8,7 +8,7 @@ echo '<article class="container box">
 
 for ($i = 0; $i < sizeof($data->getActors()); $i++) {
     $actor = $data->getActors()[$i];
-    echo '<li>' . $actor->getFirstName() . '  ' . $actor->getLastName() . '</li>';
+    echo '<li>' . $actor->getFirstName() . ' ' . $actor->getLastName() . '</li>';
 }
 
 echo '</ul>
@@ -16,3 +16,4 @@ echo '</ul>
                 <h2>Synopsis</h2>
                 <p>' . $data->getSynopsis() . '</p>
                 </article>';
+
