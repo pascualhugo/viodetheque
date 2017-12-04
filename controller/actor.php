@@ -10,8 +10,8 @@
     <header>
         <nav class="menu box">
             <ul>
-                <li><a href="../controller/movie.php" >Film</a></li>
-                <li><a href="person.php" >Réalisateur</a></li>
+                <li><a href="movie.php" >Film</a></li>
+                <li><a href="actor.php" >Réalisateur</a></li>
             </ul>
         </nav>
     </header>

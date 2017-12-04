@@ -13,19 +13,20 @@ if (isset($_GET["movieId"])) {
 } else {
     $movieId = 1;
 }
-
+$movie = getMovieInformations($movieId);
 ?>
 <body>
     <?php getBlock('../view/header.php', [])?>
     <main>
         <div>
             <?php
-                getBlock('../view/infosfilm.php', getMovieInformations($movieId));
-                getBlock('../view/personPreview.php', getPersonsPreviewFromAMovie($movieId));
+                getBlock('../view/movieDetails.php', $movie);
+                getBlock('../view/personPreview.php', $movie);
             ?>
         </div>
-        <?php getBlock('../view/gallery.php', getGalleryImages($movieId));?>
+        <?php getBlock('../view/gallery.php', $movie);?>
     </main>
     <?php getBlock('../view/footer.php', []);?>
+    <script src="../js/jquery-3.2.1.js"></script>
 </body>
 </html>
