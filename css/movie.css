@@ -5,6 +5,14 @@
     margin: 0;
 }
 
+dd {
+    display: none;
+}
+
+#faq {
+    flex: 5;
+}
+
 .container {
     background-color: white;
     padding: 2rem;
@@ -37,9 +45,7 @@ nav a:hover {
 main {
     background-color: rgb(240, 240, 240);
     width: 80vw;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto;
     display: flex;
 }
 

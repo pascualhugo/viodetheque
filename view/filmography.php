@@ -10,7 +10,7 @@ function displayMoviesIfPresent ($movies, $listTitle) {
         echo '<ul><h2>' . $listTitle . '</h2>';
         for ($i = 0 ; $i < sizeof($movies) ; ++$i) {
             $movie = $movies[$i];
-            echo '<li>' . $movie['title'] . ' - (' . $movie['release_date'] . ')</li>';
+            echo '<li>' . $movie['title'] . ' (' . $movie['release_date'] . ')</li>';
         }
         echo'</ul>';
     }
