@@ -22,6 +22,13 @@ function getMovieDetails ($movieId) {
     return new Movie($movie['id'], $movie['title'], $movie['release_date'], $movie['synopsis'], $movie['rating'], $actors, $director, $images);
 }
 
+function getAllMovies () {
+    $queryMovie = "SELECT * FROM movie";
+    $requestMovie = SPDO::getInstance()->prepare($queryMovie);
+    $requestMovie->execute();
+    return $requestMovie->fetch();
+}
+
 function transformIntoPerson ($person) {
     if ($person['role'] == 'actor') {
         return new Actor($person['id'], $person['firstname'], $person['lastname'], $person['birth_informations'],

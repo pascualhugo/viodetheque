@@ -31,6 +31,28 @@ function getPersonDetails($personId)
         $person['nationality'], $person['biography'], $person['path'], $asActor, $asDirector);
 }
 
+function getAllActors () {
+    $queryMovie = "SELECT DISTINCT *
+        FROM person P 
+        JOIN movieHasPerson Mhp 
+        ON P.id = Mhp.person_id
+        WHERE role = 'actor'";
+    $requestMovie = SPDO::getInstance()->prepare($queryMovie);
+    $requestMovie->execute();
+    return $requestMovie->fetch();
+}
+
+function getAllDirectors () {
+    $queryMovie = "SELECT DISTINCT *
+        FROM person P 
+        JOIN movieHasPerson Mhp 
+        ON P.id = Mhp.person_id
+        WHERE role = 'director'";
+    $requestMovie = SPDO::getInstance()->prepare($queryMovie);
+    $requestMovie->execute();
+    return $requestMovie->fetch();
+}
+
 function getFilmography($personId)
 {
     $queryMovie = 'SELECT M.title, M.release_date, role
