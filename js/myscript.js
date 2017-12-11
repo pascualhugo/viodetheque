@@ -1,25 +1,31 @@
-
-
 $(document).ready(function() {
     manageButtons();
-    manageFaq();
 });
 
 function manageButtons() {
     $('button').on('click', function(event) {
-        var elemId = event.target.id;
+        let elemId = event.target.id;
         if(elemId === 'hideAside') {
             $('aside').hide(2000);
         } else if (elemId === 'fadeImg') {
-            $('img').fadeToggle(100);
+            $('img').fadeToggle(2000);
         } else if (elemId === 'toggleMenu') {
             $('nav').slideToggle(100);
+        } else if (elemId === 'loadFaq') {
+            let container = $(this).parent();
+            container.html('<img src="../images/Loading_icon.gif" title="loading...">');
+            $.ajax({
+                url: '../view/faq.php',
+            }).done(function (data) {
+                container.html(data);
+                manageFaq();
+            });
         }
     });
 }
 
 function manageFaq() {
-    $('li').on('mouseenter', function (event) {
+    $('#faq').find('li').on('mouseenter', function (event) {
         $(this).find('dd').slideDown(500);
         $(this).siblings().filter(function () {
             return (!$(this).data().state) || $(this).data().state === 'closeable';

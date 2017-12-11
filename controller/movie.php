@@ -26,8 +26,10 @@ $movie = getMovieDetails($movieId);
             ?>
         </div>
         <div class="aside-block">
-            <?php getBlock('../view/gallery.php', $movie);
-            getBlock('../view/faq.php', []);?>
+            <?php getBlock('../view/gallery.php', $movie) ?>
+            <aside class="box container">
+                <?php getBlock('../view/loadFaq.php', [])?>
+            </aside>
         </div>
     </main>
     <?php getBlock('../view/footer.php', []); ?>

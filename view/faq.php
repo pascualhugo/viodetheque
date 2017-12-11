@@ -1,8 +1,9 @@
 <?php
-echo '<aside id="faq" class="container box">
+sleep(2);
+echo '<div id="faq">
         <h1>FAQ</h1>
         <ul>    
-            <li>
+            <li id="q1">
               <dl>
                 <dt>question 1<strong></strong></dt>
                     <dd>
@@ -15,7 +16,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q2">
               <dl>
                 <dt>question 2<strong></strong></dt>
                     <dd>
@@ -28,7 +29,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q3">
               <dl>
                 <dt>question 3<strong></strong></dt>
                     <dd>
@@ -41,7 +42,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q4">
               <dl>
                 <dt>question 4<strong></strong></dt>
                     <dd>
@@ -54,7 +55,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q5">
               <dl>
                 <dt>question 5<strong></strong></dt>
                     <dd>
@@ -67,7 +68,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q6">
               <dl>
                 <dt>question 6<strong></strong></dt>
                     <dd>
@@ -80,7 +81,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q7">
               <dl>
                 <dt>question 7<strong></strong></dt>
                     <dd>
@@ -93,7 +94,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q8">
               <dl>
                 <dt>question 8<strong></strong></dt>
                     <dd>
@@ -106,7 +107,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q9">
               <dl>
                 <dt>question 9<strong></strong></dt>
                     <dd>
@@ -119,7 +120,7 @@ echo '<aside id="faq" class="container box">
                     </dd>
                 </dl>      
             </li>
-            <li>
+            <li id="q10">
               <dl>
                 <dt>question 1<strong></strong>0</dt>
                     <dd>
@@ -133,5 +134,5 @@ echo '<aside id="faq" class="container box">
                 </dl>      
             </li>
         </ul>
-</aside>
+</div>
 ';
